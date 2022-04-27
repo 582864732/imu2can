@@ -69,7 +69,8 @@ void Error_Handler(void);
 #define CS1_GYRO_Pin GPIO_PIN_0
 #define CS1_GYRO_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
-
+#define CAM_GPIO_Port GPIOB
+#define CAM_Pin GPIO_PIN_1
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

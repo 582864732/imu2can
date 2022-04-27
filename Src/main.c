@@ -30,6 +30,7 @@
 #include "bsp_can.h"
 #include "bsp_delay.h"
 #include "imu_interrupt.h"
+#include "imu_pwm.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -100,7 +101,7 @@ int main(void) {
     delay_init();
     imu_interrupt_init();
     imu_pwm_set(0);
-    HAL_TIM_PWM_Start(&htim10, TIM_CHANNEL_2);
+    HAL_TIM_PWM_Start(&htim10, TIM_CHANNEL_1);
     HAL_GPIO_WritePin(CAM_GPIO_Port, CAM_Pin, GPIO_PIN_RESET);
     HAL_GPIO_WritePin(GPIOB, GPIO_PIN_1, GPIO_PIN_RESET);
 

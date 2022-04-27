@@ -42,7 +42,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 /* USER CODE BEGIN PV */
-
+extern CAN_HandleTypeDef hcan1;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -225,6 +225,11 @@ void EXTI9_5_IRQHandler(void)
   /* USER CODE BEGIN EXTI9_5_IRQn 1 */
 
   /* USER CODE END EXTI9_5_IRQn 1 */
+}
+
+void CAN1_RX0_IRQHandler(void)
+{
+    HAL_CAN_IRQHandler(&hcan1);
 }
 
 /* USER CODE BEGIN 1 */
